@@ -166,7 +166,7 @@
                         <span class="o_form_label" attrs="{'invisible': [('state','in',('draft','sent'))]}">Purchase Order </span>
                         <h1>
                             <field name="priority" widget="priority" class="mr-3"/>
-                            <field name="name" readonly="1"/>
+                            <field name="name" />
                         </h1>
                     </div>
                     <group>

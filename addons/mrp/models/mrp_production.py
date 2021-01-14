@@ -458,7 +458,7 @@ class MrpProduction(models.Model):
         - to_close: The quantity produced is greater than the quantity to
         produce and all work orders has been finished.
         """
-        # TODO: duplicated code with stock_picking.py
+        # TODO: duplicated code with res_parter.py
         for production in self:
             if not production.move_raw_ids:
                 production.state = 'draft'

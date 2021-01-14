@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+account_son_managers_01,account_son_managers_02,accountant.model_account_son,purchase.group_purchase_managers,1,1,1,1
+account_son_admin_01,account_son_admin_02,accountant.model_account_son,base.group_erp_manager,1,1,1,1
+res_partner_01,res_partner_02,base.model_res_partner,base.group_erp_manager,1,1,1,1
