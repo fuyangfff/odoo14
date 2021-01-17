@@ -75,7 +75,7 @@ class PurchaseOrder(models.Model):
                 taxes_ids=taxes_ids)
             order_lines.append((0, 0, order_line_values))
         self.order_line = order_lines
-        pass
+
     def button_confirm(self):
         res = super(PurchaseOrder, self).button_confirm()
         for po in self:

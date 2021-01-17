@@ -97,8 +97,7 @@ class PurchaseOrder(models.Model):
         ('to approve', 'To Approve'),
         ('purchase', 'Purchase Order'),
         ('done', 'Locked'),
-        ('cancel', 'Cancelled'),
-        ('sure','已确认')
+        ('cancel', 'Cancelled')
     ], string='Status', readonly=True, index=True, copy=False, default='draft', tracking=True)
     order_line = fields.One2many('purchase.order.line', 'order_id', string='Order Lines', states={'cancel': [('readonly', True)], 'done': [('readonly', True)]}, copy=True)
     notes = fields.Text('Terms and Conditions')
@@ -411,9 +410,6 @@ class PurchaseOrder(models.Model):
 
     def button_done(self):
         self.write({'state': 'done', 'priority': '0'})
-
-    def button_sure(self):
-        self.write({'state': 'sure'})
 
     def _add_supplier_to_product(self):
         # Add the partner in the supplier list of the product if the supplier is not registered for
