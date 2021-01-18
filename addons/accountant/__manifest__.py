@@ -5,7 +5,7 @@
     'name': 'Accountant',
     'version': '1.0',
     'category': '',
-    'depends': ['purchase'],
+    'depends': ['purchase','sale'],
     'data': [
         'security/ir.model.access.csv',
         'views/accountant_views.xml',
