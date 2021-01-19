@@ -71,16 +71,16 @@
      </record>
 
 
-<!--    <record id="view_form_add_requisition" model="ir.ui.view">-->
-<!--        <field name="name">view.add.requisition</field>-->
-<!--        <field name="model">sale.order</field>-->
-<!--        <field name="inherit_id" ref="sale.view_order_form"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <xpath expr="//field[@name='partner_id']" position="after">-->
-<!--                            <field name="requisition_id"/>-->
-<!--            </xpath>-->
-<!--        </field>-->
-<!--     </record>-->
+    <record id="view_form_add_requisition" model="ir.ui.view">
+        <field name="name">view.add.requisition</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                            <field name="requisition_id"/>
+            </xpath>
+        </field>
+     </record>
 
 
 
