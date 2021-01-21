@@ -10,9 +10,9 @@ class PurchaseOrder(models.Model):
     requisition_id = fields.Many2one('purchase.requisition', string='Purchase Agreement', copy=False)
     is_quantity_copy = fields.Selection(related='requisition_id.is_quantity_copy', readonly=False)
 
-    @api.onchange('requisition_id')
+    @api.onchange('requisition_id','partner_id')
     def _onchange_requisition_id(self):
-        if not self.requisition_id:
+        if not self.requisition_id or not self.partner_id:
             return
 
         self = self.with_company(self.company_id)
