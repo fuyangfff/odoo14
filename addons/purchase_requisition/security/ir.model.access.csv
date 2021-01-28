@@ -6,15 +6,3 @@ access_purchase_requisition,purchase.requisition,model_purchase_requisition,purc
 access_purchase_requisition_line_purchase_user,purchase.requisition.line,model_purchase_requisition_line,purchase.group_purchase_user,1,1,1,1
 access_purchase_requisition_manager,purchase.requisition manager,model_purchase_requisition,purchase.group_purchase_manager,1,0,0,0
 access_purchase_requisition_line_manager,purchase.requisition.line manager,model_purchase_requisition_line,purchase.group_purchase_manager,1,0,0,0
-
-
-access_purchase_requisition_jh,purchase.requisition_jh,model_purchase_requisition,purchase.group_purchase_planer,1,0,0,0
-access_purchase_requisition_type_jy,purchase.requisition.type.jh,model_purchase_requisition_type,purchase.group_purchase_planer,1,0,0,0
-access_purchase_requisition_line_manager_jh,purchase.requisition.line.manager.jh,model_purchase_requisition_line,purchase.group_purchase_planer,1,0,0,0
-
-access_purchase_requisition_jl,purchase.requisition_jl,model_purchase_requisition,purchase.group_purchase_managers,1,0,0,0
-access_purchase_requisition_type_jl,purchase.requisition.type.jl,model_purchase_requisition_type,purchase.group_purchase_managers,1,0,0,0
-access_purchase_requisition_line_manager_jl,purchase.requisition.line.manager.jl,model_purchase_requisition_line,purchase.group_purchase_managers,1,0,0,0
-
-
-

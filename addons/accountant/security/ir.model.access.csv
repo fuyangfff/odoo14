@@ -1,4 +1,18 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-account_son_managers_01,account_son_managers_02,accountant.model_account_son,purchase.group_purchase_managers,1,1,1,1
+account_son_managers_01,account_son_managers_02,accountant.model_account_son,accountant.group_purchase_managers,1,1,1,1
 account_son_admin_01,account_son_admin_02,accountant.model_account_son,base.group_erp_manager,1,1,1,1
 res_partner_01,res_partner_02,base.model_res_partner,base.group_erp_manager,1,1,1,1
+
+access_purchase_order_jh,purchase.order.jh,model_purchase_order,accountant.group_purchase_planer,1,1,1,1
+access_purchase_order_line_jh,purchase.order.line.jh user,purchase.model_purchase_order_line,accountant.group_purchase_planer,1,1,1,1
+
+access_purchase_order_jl,purchase.order.jl,model_purchase_order,accountant.group_purchase_managers,1,1,1,1
+access_purchase_order_line_jl,purchase.order.line.jl user,purchase.model_purchase_order_line,accountant.group_purchase_managers,1,1,1,1
+
+access_purchase_requisition_jh,purchase.requisition_jh,purchase_requisition.model_purchase_requisition,accountant.group_purchase_planer,1,0,0,0
+access_purchase_requisition_type_jy,purchase.requisition.type.jh,purchase_requisition.model_purchase_requisition_type,accountant.group_purchase_planer,1,0,0,0
+access_purchase_requisition_line_manager_jh,purchase.requisition.line.manager.jh,purchase_requisition.model_purchase_requisition_line,accountant.group_purchase_planer,1,0,0,0
+
+access_purchase_requisition_jl,purchase.requisition_jl,purchase_requisition.model_purchase_requisition,accountant.group_purchase_managers,1,0,0,0
+access_purchase_requisition_type_jl,purchase.requisition.type.jl,purchase_requisition.model_purchase_requisition_type,accountant.group_purchase_managers,1,0,0,0
+access_purchase_requisition_line_manager_jl,purchase.requisition.line.manager.jl,purchase_requisition.model_purchase_requisition_line,accountant.group_purchase_managers,1,0,0,0

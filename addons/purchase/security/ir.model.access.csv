@@ -37,10 +37,3 @@ access_account_account_purchase_manager,account.account purchase manager,account
 access_purchase_bill_union,access_purchase_bill_union,model_purchase_bill_union,purchase.group_purchase_user,1,0,0,0
 access_report_purchase_order,purchase.stock.report,model_purchase_report,purchase.group_purchase_manager,1,0,0,0
 access_report_purchase_order_user,purchase.stock.report user,model_purchase_report,purchase.group_purchase_user,1,0,0,0
-
-access_purchase_order_jh,purchase.order.jh,model_purchase_order,group_purchase_planer,1,1,1,1
-access_purchase_order_line_jh,purchase.order.line.jh user,model_purchase_order_line,group_purchase_planer,1,1,1,1
-
-access_purchase_order_jl,purchase.order.jl,model_purchase_order,group_purchase_managers,1,1,1,1
-access_purchase_order_line_jl,purchase.order.line.jl user,model_purchase_order_line,group_purchase_managers,1,1,1,1
-

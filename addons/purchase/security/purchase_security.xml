@@ -13,22 +13,10 @@
         <field name="category_id" ref="base.module_category_inventory_purchase"/>
     </record>
 
-    <record id="group_purchase_planer" model="res.groups">
-        <field name="name">采购计划员</field>
-        <field name="category_id" ref="base.module_category_inventory_purchase"/>
-        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-    </record>
-
-    <record id="group_purchase_managers" model="res.groups">
-        <field name="name">采购经理</field>
-        <field name="category_id" ref="base.module_category_inventory_purchase"/>
-        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-    </record>
-
     <record id="group_purchase_manager" model="res.groups">
         <field name="name">Administrator</field>
         <field name="category_id" ref="base.module_category_inventory_purchase"/>
-        <field name="implied_ids" eval="[(4, ref('group_purchase_planer'))]"/>
+        <field name="implied_ids" eval="[(4, ref('group_purchase_user'))]"/>
         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
     </record>
 
@@ -40,28 +28,6 @@
     <record id="group_send_reminder" model="res.groups">
         <field name="name">Send an automatic reminder email to confirm delivery</field>
         <field name="category_id" ref="base.module_category_hidden"/>
-    </record>
-
-
-    <record id="purchase_all_mesg" model="ir.rule">
-        <field name="name">see_all</field>
-        <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
-        <field name="domain_force">[(1, '=', 1)]</field>
-        <field name="groups" eval="[(4, ref('group_purchase_planer'))]"/>
-    </record>
-
-    <record id="purchase_all_mesg_mag" model="ir.rule">
-        <field name="name">see_all_mag</field>
-        <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
-        <field name="domain_force">[(1, '=', 1)]</field>
-        <field name="groups" eval="[(4, ref('group_purchase_managers'))]"/>
-    </record>
-
-    <record id="purchase_all_mesg_yh" model="ir.rule">
-        <field name="name">see_ayh</field>
-        <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
-        <field name="domain_force">[("user_id", '=', user.id)]</field>
-        <field name="groups" eval="[(4, ref('group_purchase_user'))]"/>
     </record>
 
 </data>
