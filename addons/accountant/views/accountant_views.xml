@@ -130,7 +130,7 @@
         sequence="11"
         parent="purchase.menu_procurement_management"
         action="action_accountant"/>
-
+<!--销售订单供应过滤-->
     <record id="view_change_name" model="ir.ui.view">
         <field name="name">view.change.name</field>
         <field name="model">sale.order</field>
@@ -145,6 +145,7 @@
         </field>
      </record>
 
+<!-- 采购订单供应过滤-->
     <record id="view_save_name" model="ir.ui.view">
         <field name="name">view.save.name</field>
         <field name="model">purchase.order</field>
@@ -152,6 +153,9 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="attributes">
                 <attribute name="readonly">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="replace">
+                <field name="partner_id" widget="res_partner_many2one" context="{'res_partner_search_mode': 'supplier', 'show_vat': True}" placeholder="Name, TIN, Email, or Reference" domain="[('customer_rank','>', 0)]"/>
             </xpath>
         </field>
      </record>
